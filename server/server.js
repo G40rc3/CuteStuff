@@ -3,14 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 
 const app = express();
-app.use(cors());
-app.use(express.json());
-app.use(
-  cors({
-    origin: "",
-    methods: ["GET", "POST"],
-  })
-);
+
 dotenv.config();
 
 app.get("/", function (request, response) {
@@ -21,6 +14,7 @@ app.post("/message", function (request, response) {
   response.json({ message: "Boop" });
 });
 
-app.listen(8080, () => {
-  console.log("Server running on port 8080");
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
