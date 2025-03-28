@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "type": "module",
+    "express": "^4.21.2",
+    "node": "^18.20.8",
+    "supabase": "^2.20.5"
+  }
+}
