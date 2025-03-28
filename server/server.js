@@ -11,7 +11,7 @@ app.use(
     methods: ["GET", "POST"],
   })
 );
-configDotenv.config();
+dotenv.config();
 
 app.get("/", function (request, response) {
   response.json({ message: "Beep" });
